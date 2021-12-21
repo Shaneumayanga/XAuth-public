@@ -1,5 +1,8 @@
 # How it works
 
+```bash
+git clone https://github.com/Shaneumayanga/XAuth-public
+```
 
 ## start oAuth flow :-
 http://localhost:8080/login/oauth/authorize?client_id=84bd6d67-892d-4ebb-ab8f-361504388042&redirect_url=https://shaneumayanga.com/redirect&response_type=code
