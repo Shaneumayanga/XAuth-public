@@ -24,3 +24,5 @@ http://localhost:8080/login/oauth/authorize?client_id=84bd6d67-892d-4ebb-ab8f-36
 - Add a login time table to check for bruteforce
 - CSRF Token
 - helmet
+- better ratelimits
+- css cleanups
