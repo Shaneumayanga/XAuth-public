@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Register</title>
+
+    <!-- Styles -->
+    <!-- <link rel="stylesheet" href="../assets/css/register&LoginPages.css">
+    <link rel="stylesheet" href="../assets/css/buttons.css"> -->
+    <!-- Styles End -->
+    <style>
+        html {
+            overflow-x: hidden !important;
+        }
+
+        body {
+            background-image: url("/assets/images/peaks.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            background-color: rgba(0, 0, 0, 0.342);
+        }
+
+        h1 {
+            font-size: 75px;
+            text-align: center;
+            width: 100%;
+            color: #f8f8f2;
+        }
+
+        form {
+            height: 50vh;
+            margin-top: -100px;
+        }
+
+        form>.input-text {
+            margin: 10px 0px;
+            width: 100%;
+            padding: 10px;
+            border-radius: 50px;
+            font-size: 18px;
+            background-color: #44475a;
+            color: #f8f8f2;
+            border: 3px solid #f8f8f2;
+            transition: .8s;
+        }
+
+        form>.input-text::placeholder {
+            color: #f8f8f2;
+            text-transform: capitalize;
+        }
+
+        form>.input-text::placeholder:focus-visible {
+            color: #62e1fd !important;
+        }
+
+        form>.input-text:hover {
+            border: 3px solid #50fa7b;
+        }
+
+        form>.input-text:focus-visible {
+            outline: none;
+            color: #62e1fd;
+            border: 3px solid #62e1fd;
+        }
+
+        a.link {
+            display: block;
+            font-size: 25px;
+            color: #f8f8f2;
+            text-transform: capitalize;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            transition: .5s;
+            width: 60%;
+            text-align: center;
+            padding: 8px;
+            margin: auto;
+        }
+
+        a.link:hover {
+            border-top: 3px solid #62e1fd;
+            border-bottom: 3px solid #62e1fd;
+            padding: 8px;
+            color: #8be9fd;
+        }
+
+        .side-by-side {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .btn {
+            display: block;
+            margin: auto;
+            margin-top: 20px;
+            padding: 8px;
+            font-size: 18px;
+            background-color: transparent;
+            border-radius: 50px;
+            width: 10rem;
+            color: #fff;
+            border: 3px solid #fff;
+            cursor: pointer;
+            text-transform: capitalize;
+        }
+
+        .btn:hover {
+            background-color: #0089a8;
+            border: 3px solid #0089a8;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <main>
+        <form method="post" action="/register">
+            <h1>Hello register</h1>
+            <input name="email" placeholder="email" class="input-text" required />
+            <br>
+            <input name="name" placeholder="your name" class="input-text"  required/>
+            <br>
+            <input name="password" type="password" placeholder="password" class="input-text" type="password" required  />
+            <br>
+            <input type="submit" value="submit" class="btn" />
+            <br><br>
+            <a href="/login" class="link">👉 Login here 👈</a>
+        </form>
+    </main>
+
+</body>
+
+</html>

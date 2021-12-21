@@ -1,0 +1,60 @@
+
+html{
+    overflow-x: hidden !important;
+}
+
+body{
+    background-image: url("../images/peaks.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0px;
+    margin: 0px;
+    color: #f8f8f2;
+}
+
+main{
+    height: auto;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.514);
+}
+
+h4{
+    color: #8be9fd;
+}
+
+p{
+    font-size: 18px;
+}
+
+.welcome-para{
+    font-size: 20px;
+}
+
+code{
+    font-size: 14px;
+    background-color: #222;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+a{
+    font-size: 20px;
+    color: #8be9fd;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #8be9fd;
+    text-decoration: underline;
+}
+
+.welcome-separator{
+    border: none;
+    opacity: 1;
+    width: 75%;
+    display: block;
+    margin: auto;
+    border-bottom: 4px solid #bd93f9;
+}

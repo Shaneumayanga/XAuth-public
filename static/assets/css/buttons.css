@@ -1,0 +1,23 @@
+
+.btn{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    padding: 8px;
+    font-size: 18px;
+    background-color: transparent;
+    border-radius: 50px;
+    width: 10rem;
+    color: #fff;
+    border: 3px solid #fff;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.btn:hover{
+    background-color: #0089a8;
+    border: 3px solid #0089a8;
+}
+
+
+
