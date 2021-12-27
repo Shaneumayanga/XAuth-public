@@ -59,7 +59,7 @@ func (oh *OAuthHandler) AuthorizeLogin(c *gin.Context) {
 	client_id := c.Request.URL.Query().Get("client_id")
 	redirect_url := c.Request.URL.Query().Get("redirect_url")
 	response_type := c.Request.URL.Query().Get("response_type")
-	if client_id == "" || redirect_url == "" || response_type == "" || response_type != "code" {
+	if client_id == "" || redirect_url == "" || response_type != "code" {
 		c.JSON(200, map[string]string{
 			"redirect_url": "",
 			"error":        "INCORRECT_CONFIGURATION",
