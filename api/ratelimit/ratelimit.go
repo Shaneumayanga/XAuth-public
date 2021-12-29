@@ -67,6 +67,7 @@ func (rl *RateLimiter) Use() func(c *gin.Context) {
 		rl.clientnew <- clientIP
 		if rl.IsBlocked(clientIP) {
 			http.Redirect(c.Writer, c.Request, "/onblock", http.StatusSeeOther)
+			c.Abort()
 		}
 		c.Next()
 	}
