@@ -1,5 +1,3 @@
-# Disclaimer :
-
 ## This is not that great, idk , not meant for production, lol, Working on a better version that will be self hostable :-)) 
 
 # How it works
