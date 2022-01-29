@@ -13,7 +13,7 @@ import (
 )
 
 //website :~ shaneumayanga.com
-//email :~ shaneumayanga445@gmail.com
+//email :~ me@shaneumayanga.com
 //hosted on :~ xauth.shaneumayanga.com
 
 func main() {
