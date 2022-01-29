@@ -20,12 +20,3 @@ http://localhost:8080/login/oauth/authorize?client_id=84bd6d67-892d-4ebb-ab8f-36
  ## TODO
 
 - scopes and openid
-- mysql implimentations
-- Redirect to unknown error in line 85 of oAuth.go
-- Validations in the backend
-- Postgres connection error
-- Add a login time table to check for bruteforce
-- CSRF Token
-- helmet
-- better ratelimits
-- css cleanups
