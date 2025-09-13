@@ -7,13 +7,12 @@ import (
 	"github.com/jmoiron/sqlx"
 )
 
-
 func Run(db *sqlx.DB) {
 	fmt.Println("Cleanup started")
 	for {
 		select {
 		case <-time.After(time.Minute * 10):
-			db.MustExec("DELETE FROM codes")
+			db.MustExec("DELETE FROM Codes")
 			fmt.Printf("codes cleaned up")
 
 		}

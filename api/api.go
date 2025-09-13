@@ -24,7 +24,7 @@ import (
 var homeTemplate = template.Must(template.ParseFiles("././static/index.html"))
 var myappstemplate = template.Must(template.ParseFiles("././static/app/my_apps.html"))
 
-//error templates
+// error templates
 var (
 	invalidappclient = template.Must(template.ParseFiles("././static/app/invalid_app_client.html"))
 )
@@ -73,6 +73,7 @@ func Start() *gin.Engine {
 
 	db := db.GetDB()
 	go cleanup.Run(db)
+
 	handler.Use(cors.New(cors.Config{
 		AllowAllOrigins:  true,
 		AllowMethods:     []string{"POST", "GET"},

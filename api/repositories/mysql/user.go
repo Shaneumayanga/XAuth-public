@@ -16,7 +16,7 @@ var (
 	insertuser        = `INSERT INTO Users VALUES (? , ? , ? , ?);`
 	queryuserbyemail  = `SELECT * FROM Users WHERE email = ?;`
 	queryuserbyuserid = `SELECT * FROM Users WHERE id = ?;`
-	getuserwithapps   = `SELECT * FROM Apps INNER JOIN users on users.id = apps.userid  WHERE users.id = ?;`
+	getuserwithapps   = `SELECT * FROM Apps INNER JOIN Users on Users.id = Apps.userid  WHERE Users.id = ?;`
 )
 
 func NewUserRepo(db *sqlx.DB) *userRepo {
@@ -28,6 +28,7 @@ func NewUserRepo(db *sqlx.DB) *userRepo {
 func (ur *userRepo) SaveUser(user models.User) error {
 	result, err := ur.db.Exec(insertuser, user.ID, user.Email, user.Name, user.Password)
 	if err != nil {
+		fmt.Printf("err.Error(): %v\n", err.Error())
 		return errors.New("unknown error occured please try again later")
 	}
 	fmt.Println(result.RowsAffected())
