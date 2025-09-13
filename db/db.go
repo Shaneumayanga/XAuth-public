@@ -39,6 +39,7 @@ func GetDB() *sqlx.DB {
 	}
 
 	if os.Getenv("POSTGRES") == "TRUE" {
+
 		connection := fmt.Sprintf("host=%s user=%s dbname=%s sslmode=%s password=%s port=%s", dbconfig.Host, dbconfig.DBUser, dbconfig.DBName, dbconfig.SSLmode, dbconfig.DBPassword, dbconfig.Port)
 		db, err := sqlx.Connect("postgres", connection)
 		db.SetMaxOpenConns(10)
@@ -49,7 +50,9 @@ func GetDB() *sqlx.DB {
 		migrations.Migrate(db)
 		return db
 	} else {
+
 		dsn := os.Getenv("DSN_MYSQL")
+
 		db, err := sqlx.Connect("mysql", dsn)
 		if err != nil {
 			panic(err)
@@ -57,7 +60,9 @@ func GetDB() *sqlx.DB {
 		db.SetMaxIdleConns(100)
 		db.SetMaxOpenConns(100)
 		db.SetConnMaxLifetime(1 * time.Minute)
-		// migrations.MigrateMYSQL(db)
+
+		migrations.MigrateMYSQL(db)
+
 		return db
 	}
 

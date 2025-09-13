@@ -23,7 +23,7 @@ var (
 	insertuser        = `INSERT INTO Users VALUES ($1 , $2 , $3 , $4);`
 	queryuserbyemail  = `SELECT * FROM Users WHERE email = $1;`
 	queryuserbyuserid = `SELECT * FROM Users WHERE id = $1;`
-	getuserwithapps   = `SELECT * FROM Apps INNER JOIN users on users.id = apps.userid  WHERE users.id = $1;`
+	getuserwithapps   = `SELECT * FROM Apps INNER JOIN Users on Users.id = Apps.userid  WHERE Users.id = $1;`
 )
 
 func NewUserRepo(db *sqlx.DB) *userRepo {
@@ -38,6 +38,7 @@ func (ur *userRepo) SaveUser(user models.User) error {
 		if err.Error() == `pq: duplicate key value violates unique constraint "users_email_key"` {
 			return errors.New("email already exists try again")
 		} else {
+			fmt.Printf("err.Error(): %v\n", err.Error())
 			return errors.New("unknown error occured please try again later")
 		}
 	}

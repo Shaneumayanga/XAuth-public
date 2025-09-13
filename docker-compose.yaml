@@ -1,0 +1,23 @@
+# Use root/example as user/password credentials
+
+services:
+
+  database:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: xauth
+    ports:
+      - "3306:3306"     
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - database
+    env_file:
+      - .env
+    entrypoint: ["/usr/local/bin/wait-for-it.sh", "database:3306", "--timeout=60", "--", "/app/xauth-build"]
